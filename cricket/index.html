@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="img/cricket-logo-png-7553.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
+">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <title>CricPoint</title>
+  <style>
+    .match {
+        border: 1px solid #ccc;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar- bg-success">
+      <div class="container-fluid">
+        <a style="font-size: 25px;color: white;font-weight: 700;" id="criclogo" class="navbar-brand" href="index.html">CricPoint</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div id=""  class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+          <ul id="" class="navbar-nav ml-auto me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live Score</a>
+            </li>
+            <li class="nav-item">
+              <a  class="nav-link active" aria-current="page" href="#">News</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Series
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="IndVsBan.html" target="">India tour of Bangladesh,2022</a></li>
+                <li><a class="dropdown-item" href="#">New Zealand tour of Pakistan,2022</a></li>
+                <li><a class="dropdown-item" href="#">England tour of South Africa,2023</a></li>
+                <li><a class="dropdown-item" href="#">West Indies tour of South Africa,2023</a></li>
+                <li><a class="dropdown-item" href="#">Sri Lanka tour New Zealand,2023</a></li>
+                <li><a class="dropdown-item" href="#">Netherlands tour of South Africa,2023</a></li>
+                <li><a class="dropdown-item" href="#">New Zealand tour of Pakistan,2023</a></li>
+                <li><a class="dropdown-item" href="#">The Ashes,2023</a></li>
+                <li><a class="dropdown-item" href="#">New Zealand tour of England,2023</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Archives</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Team
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="bdteam.html">Bangladesh</a></li>
+                <li><a class="dropdown-item" href="#">India</a></li>
+                <li><a class="dropdown-item" href="#">Srilanka</a></li>
+                <li><a class="dropdown-item" href="#">Pakistan</a></li>
+                <li><a class="dropdown-item" href="#">Australia</a></li>
+                <li><a class="dropdown-item" href="#">Newzealand</a></li>
+                <li><a class="dropdown-item" href="#">England</a></li>
+                <li><a class="dropdown-item" href="#">South Africa</a></li>
+                <li><a class="dropdown-item" href="#">Westindies</a></li>
+                <li><a class="dropdown-item" href="#">Afganistan</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ranking
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Icc men's t20 ranking </a></li>
+                <li><a class="dropdown-item" href="#">Icc men's odi ranking </a></li>
+                <li><a class="dropdown-item" href="#">Icc men's test ranking </a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Icc world test championship</a></li>
+                <li><a class="dropdown-item" href="#">Icc odi super league</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="login.html" tabindex="-1" aria-disabled="true">
+                Login
+              </a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-dark" type="submit" id="">Search</button>
+          
+
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!------------------------------------------------------------>
+
+  <section class="matches">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a style="color:white ;font-weight: 700;" class="navbar-brand" href="#">Matches</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-space-between" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Wi vs Afg-Live</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Ban vs Ind-Ban won</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Aus vs Sri-Aus won</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Eng vs Pak-Pak won</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Eng vs Pak-Pak won</a>
+            </li>
+                    
+            <li style="margin-left: 100px !important;" class="nav-item dropdown d-flex pl-5 ml-5">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                All
+              </a>
+              <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">All</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </section>
+
+
+
+  <!-------------------------------------------------------------->
+  
+  <section class="feature-match mt-2">
+    <div class="pl-5">
+      <h3 >Feature matches</h3>
+      <div class="row mt-3">
+        <div class="col">
+          <div id="scoreboard">Loading scores...</div>
+
+          <span>Ban</span><span class="pl-5">174-5(20)</span><br>
+          <span>Ind</span><span class="pl-5">171-3(20)</span><p></p>
+          <p>Ban won by 3 runs</p>
+        </div>
+        <div class="col">
+          <span>Ban</span><span class="pl-5">174-5(20)</span><br>
+          <span>Ind</span><span class="pl-5">171-3(20)</span><p></p>
+          <p>Ban won by 3 runs</p>
+        </div>
+        <div class="col">
+          <span>Aus</span><span class="pl-5">201-6(20)</span><br>
+          <span>Sri</span><span class="pl-5">205-3(19.5)</span><br><p></p>
+          <p>Sri won by 7 wicket</p>
+        </div>
+        <div class="col">
+          <span>Eng</span><span class="pl-5">189-5(20)</span><br>
+          <span>Pak</span><span class="pl-5">160-8(20)</span><br><p></p>
+          <p>Eng won by 30 runs</p>
+        </div>
+      </div>
+    </div>
+    
+
+  </section>
+
+  <!------------------------------------------------->
+  <div class="body">
+  <section class="news mt-3">
+    <div class="ml-3">
+
+      <div class="row">
+      <div class="col-4">
+        <div style="background: white;" class="mt-2">
+          <h3 style="color: green;" class="ml-2 mt-2">Latest news</h3>
+          <div class="latest">
+            <p><a href="">Topley ruled out of T20 world cup with ankle injury</a></p>
+            <div class="min-t"><span>10m ago</span></div>
+            <p><a href="">Jay Shah's statement could impact Pakistan's future visits to India for ICC events: PCB</a></p>
+            <div class="min-t"><span>56m ago</span></div>
+            <p><a href="">WIPL plans: Open bidding for teams, drafts for players</a></p>
+            <div class="min-t"><span>1h ago</span></div>
+            <p><a href="">Smith unlikely to play against NZ, indicates George Bailey</a></p>
+            <div class="min-t"><span>2h ago</span></div>
+            <p><a href="">Sourav Ganguly makes graceful exit as Roger Binny takes office</a></p>
+            <div class="min-t"><span>2h ago</span></div>
+            <p><a href="">Alyssa Healy named as Australia vice-captain</a></p>
+            <div class="min-t"><span>3h ago</span></div>
+            <p><a href="">T20I leg of West Indies' tour of Pakistan postponed to 2024</a></p>
+            <div class="min-t"><span>5h ago</span></div>
+            <p><a href="">Topley ruled out of T20 world cup with ankle injury</a></p>
+            <div class="min-t"><span>6h ago</span></div>
+            <p><a href="">Pakistan players' availability - Boost for BPL franchises</a></p>
+            <div class="min-t"><span>9h ago</span></div>
+            <p><a href="">Rajitha replaces injured Chameera in Sri Lanka's squad for T20 World Cup</a></p>
+            <div class="min-t"><span>10h ago</span></div>
+            <p><a href="">Alyssa Healy named as Australia vice-captain</a></p>
+            <div class="min-t"><span>1d ago</span></div>
+            <p><a href="">BCCI to insist on neutral venue for 2023 Asia Cup</a></p>
+            <div class="min-t"><span>1d ago</span></div>
+            <br>
+
+            
+          </div>
+
+
+        </div>
+
+<!-------------------------------------------->
+       <div style="" class="colNo_1 mt-2">
+        <div class="row mt-2">
+          <div class="col-12">
+            <div class="colNo_1Body  mt-2 ml-2">
+              <h4 class="">Latest photos </h4>
+              <img class="mt-2" src="https://www.cricbuzz.com/a/img/v1/165x95/i1/c244877/t20-world-cup-2022-match-7-we.jpg" alt=""><br><br>
+              <a style="text-decoration:none ;font-weight: 500;font-size: 17px; color: black;" class="mt-2" href="">T20 World Cup 2022 Match 7: West Indies vs Zimbabwe</a><br>
+              <span>Wed, Oct 19 2022</span><br><br>
+
+            </div>
+            <div class="colNo_1Body  mt-2 ml-2">
+              <img class="mt-2" src="https://www.cricbuzz.com/a/img/v1/165x95/i1/c244522/t20-world-cup-2022-match-4-zi.jpg" alt=""><br><br>
+              <a style="text-decoration:none ;font-weight: 500;font-size: 17px; color: black;" class="mt-2" href="">T20 World Cup 2022 Match 4: Zimbabwe vs Ireland</a><br>
+              <span>Wed, Oct 19 2022</span><br><br>
+            </div>
+            <div class="colNo_1Body  mt-2 ml-2">
+              <img class="mt-2" src="https://www.cricbuzz.com/a/img/v1/165x95/i1/c244530/t20-world-cup-2022-match-3-we.jpg" alt=""><br><br>
+              <a style="text-decoration:none ;font-weight: 500;font-size: 17px; color: black;" class="mt-2" href="">T20 World Cup 2022 Match 4: Zimbabwe vs Ireland</a><br>
+              <span>Wed, Oct 19 2022</span><br><br>
+            </div>
+            <div class="colNo_1Body  mt-2 ml-2">
+              <img class="mt-2" src="https://www.cricbuzz.com/a/img/v1/165x95/i1/c244501/t20-world-cup-2022-match-2-ua.jpg" alt=""><br><br>
+              <a style="text-decoration:none ;font-weight: 500;font-size: 17px; color: black; " class="mt-2" href="">T20 World Cup 2022 Match 2: UAE vs Netherlands</a><br>
+              <span>Wed, Oct 19 2022</span><br>
+              <br>
+            </div>
+            <div class="colNo_1Body  mt-2 ml-2">
+              <img class="mt-2" src="https://www.cricbuzz.com/a/img/v1/165x95/i1/c244468/t20-world-cup-2022-match-1-sr.jpg" alt=""><br><br>
+              <a style="text-decoration:none ;font-weight: 500;font-size: 17px; color: black; " class="mt-2" href="">T20 World Cup 2022 Match 1: Sri Lanka vs Namibia</a><br>
+              <span>Wed, Oct 19 2022</span><br>
+              <br>
+            </div>
+            <br>
+           
+          </div>
+
+        </div>
+       </div>
+
+       <div style="background-color:white ;" class="scedules mt-2">
+        <div class="row">
+          <div class="col-12">
+            <div class="scedules_body">
+              <h4 style="color: green;" class="mt-3 ml-2">Schedule</h4>
+             <div class="schedules_match ml-2 mt-1">
+             <a href="">Sri Lanka vs Netherlands, 9th Match, Group A</a><br>
+              <span>Thu Oct 20 • 10:00 AM GMT</span>
+             </div>
+             <div class="schedules_match ml-2 mt-2">
+              <a href="">Namibia vs United Arab Emirates, 10th Match, Group A</a><br>
+               <span>Thu Oct 20 • 2:00 PM GMT</span>
+              </div>
+              <div class="schedules_match ml-2 mt-2">
+                <a href="">West Indies vs Ireland, 11th Match, Group B</a><br>
+                 <span>Fri Oct 21 • 10:00 AM GMT
+                </span>
+                </div>
+                <div class="schedules_match ml-2 mt-2">
+                  <a href="">Scotland vs Zimbabwe, 12th Match, Group B
+                  </a><br>
+                   <span>Fri Oct 21 • 2:00 PM GMT
+                  </span>
+                  </div>
+                  <div class="schedules_match ml-2 mt-2">
+                    <a href="">New Zealand vs Australia, 13th Match, Super 12 Group 1
+                    </a><br>
+                     <span>Sat Oct 22 • 1:00 PM GMT
+                    </span>
+                    </div>
+                    <div class="schedules_match ml-2 mt-2">
+                      <a href="">England vs Afghanistan, 14th Match, Super 12 Group 1
+                      </a><br>
+                       <span>Sun Oct 23 • 10:00 AM GMT
+
+                      </span>
+                      </div>
+                      <div class="schedules_match ml-2 mt-2">
+                        <a href="">India vs Pakistan, 16th Match, Super 12 Group 2
+
+                        </a><br>
+                         <span>Sun Oct 23 • 2:00 PM GMT
+                        </span><br><br>
+                        </div>
+
+            </div>
+
+          </div>
+        </div>
+       </div>
+
+      </div>
+
+      <div style="background-color:white " class="col-4 mt-2">
+        <div>
+          <div style="newsimg" class="mt-4">
+            <span>WI VS ZIM, 8TH MATCH, GROUP B</span>
+            <div class="col-2_news mt-3">
+              <a   href=""><img   src="https://imgs.search.brave.com/RVkL7dbsyTGCQ-EfIT2bS5BWWejB6ngufqTAz1C7CYA/rs:fit:844:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5Z/MktJaUlSaUd6bDAw/Szcxam9aYXFRSGFF/SyZwaWQ9QXBp" alt=""></a>
+              <a  style="text-decoration: none;color: black;font-size: 25px;font-weight: 700;" class="newsimgs mt-5" href="">West Indies keep WC hopes alive with thumping win</a><br>
+              <span>Alzarri Joseph returned four wickets, while Jason Holder bagged three
+              </span>
+            </div>
+            
+          </div>
+          
+          <div class="zimVSwi mt-2">
+            <div class="mt-3 ml-3">
+              <p class="mt-2">Zim &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;122(20) </p>
+              <p>Wi &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;152-7(20) </p>
+              <span>Wi won by 30 runs</span>
+
+
+            </div>
+            
+          </div>
+          <div style="newsimg" class="mt-4">
+            <span>T20 WORLD CUP, 2022
+            </span>
+            <div class="col-2_news mt-3">
+              <a   href=""><img style="width:390px ;"   src="https://www.cricbuzz.com/a/img/v1/420x235/i1/c244893/the-method-and-madness-of-camp.jpg" alt=""></a>
+              <a style="text-decoration: none;color: black;font-size: 25px;font-weight: 700;" class="newsimgs mt-5" href=""> The method and madness of Campher-Dockrell 360-degree stand</a><br>
+              <span>None of Dockrell's 39 runs came behind square while in contrast, Campher got 27 of his in that region
+              </span>
+            </div>
+            <div class="mt-2"><h6><a style="text-decoration:none ;"  href="">Beat the best by being better: The simple Mark Watt mantra</a></h6></div>
+            
+          </div>
+
+
+          <div style="newsimg" class="mt-4">
+            <span>INDIA'S PREPARATIONS
+            </span>
+            <div class="col-2_news mt-3">
+              <a   href=""><img style="width:390px ;"   src="https://www.cricbuzz.com/a/img/v1/420x235/i1/c244866/takeaways-rahuls-buy-in-sha.jpg" alt=""></a>
+              <a style="text-decoration: none;color: black;font-size: 25px;font-weight: 700;" class="newsimgs mt-5" href="">Takeaways: Rahul's buy-in, Shami's one-over gains</a><br>
+              <span>How are India shaping up for the T20 World Cup and what their build-up in Australia has told us...
+              </span>
+            </div>
+            <div class="mt-2"><h6><a style="text-decoration:none ;"  href="">The square Shami peg in India's round bowling hole</a></h6></div>
+            
+          </div>
+
+
+          <div style="newsimg" class="mt-4">
+            <span>T20 WORLD CUP, 2022
+            </span>
+            <div class="col-2_news mt-3">
+              <a   href=""><img style="width:390px ;"   src="https://www.cricbuzz.com/a/img/v1/420x235/i1/c244840/lankans-need-win-nambia-need.jpg" alt=""></a>
+              <a style="text-decoration: none;color: black;font-size: 25px;font-weight: 700;" class="newsimgs mt-5" href=""> Lankans need win; Nambia need runrate</a><br>
+              <span>Two crucial Group A encounters set to be played in Geelong on Thursday
+              </span>
+            </div>
+            <div class="mt-2"><h6><a style="text-decoration:none ;"  href="">Qualification scenarios: Namibia, Netherlands and Sri Lanka in a tight three-way race</a></h6></div>
+            <div class="mt-2"><h6><a style="text-decoration:none ;"  href="">A tale of two pitches at Kardinia Park</a></h6></div>
+          </div>
+
+
+
+          <div style="newsimg" class="mt-4">
+            <span>T20 WORLD CUP, 2022
+            </span>
+            <div class="col-2_news mt-3">
+              <a   href=""><img style="width:390px ;"   src="https://www.cricbuzz.com/a/img/v1/420x235/i1/c244890/topley-ruled-out-of-t20-world.jpg" alt=""></a>
+              <a style="text-decoration: none;color: black;font-size: 25px;font-weight: 700;" class="newsimgs mt-5" href="">Topley ruled out of T20 world cup with ankle injury</a><br>
+              <span>Tymal Mills has been drafted in as Topley's replacement in the England squad while Luke Wood has been included as a travelling reserve
+              </span>
+            </div>
+            <div class="mt-2"><h6><a style="text-decoration:none ;"  href="">Rajitha replaces injured Chameera for T20 WC</a></h6></div> 
+            <div class="mt-2"><h6><a style="text-decoration:none ;"  href="">Smith unlikely to play against NZ, indicates Bailey</a></h6></div> 
+          </div>
+
+
+          <div style="newsimg" class="mt-4">
+            <span>WOMEN'S IPL
+            </span>
+            <div class="col-2_news mt-3">
+              <a   href=""><img style="width:390px ;"   src="https://www.cricbuzz.com/a/img/v1/420x235/i1/c244852/wipl-plans-open-bidding-for-t.jpg" alt=""></a>
+              <a style="text-decoration: none;color: black;font-size: 25px;font-weight: 700;" class="newsimgs mt-5" href="">WIPL plans: Open bidding for teams, drafts for players</a><br>
+              <span>Of the existing 10 IPL franchises, at least six have shown an initial interest in buying a WIPL team but are are unlikely to get the first rights to pick
+              </span>
+            </div>
+            <div class="mt-2"><h6><a style="text-decoration:none ;"  href="">No first right of refusal for IPL owners</a></h6></div> 
+            
+          </div>
+          <div style="newsimg" class="mt-4">
+            <span>T20 WORLD CUP, 2022
+
+            </span>
+            <div class="col-2_news mt-3">
+              <a  href=""><img style="width:390px ;"   src="https://www.cricbuzz.com/a/img/v1/420x235/i1/c244511/can-india-ride-the-t20-evoluti.jpg" alt=""></a>
+              <a style="text-decoration: none;color: black;font-size: 25px;font-weight: 700;" class="newsimgs mt-5" href="">Can India ride the T20 evolutionary tide?</a><br>
+              <span>Tymal Mills has been drafted in as Topley's replacement in the England squad while Luke Wood has been included as a travelling reserve
+              </span>
+            </div>
+            
+          </div>
+          <div style="newsimg" class="mt-4">
+            <span>ASIA CUP CONTROVERSY
+
+            </span>
+            <div class="col-2_news mt-3">
+              <a   href=""><img style="width:390px ;"   src="https://www.cricbuzz.com/a/img/v1/420x235/i1/c244864/jay-shahs-statement-could-imp.jpg" alt=""></a>
+              <a style="text-decoration: none;color: black;font-size: 25px;font-weight: 700;" class="newsimgs mt-5" href="">Jay Shah's statement could impact Pakistan's future visits to India for ICC events: PCB</a><br>
+              <span>The PCB has strongly reacted to the news of the BCCI insisting on the 2023 Asia Cup to be moved out of Pakistan to a neutral venue
+              </span>
+            </div>
+            <div class="mt-2"><h6><a style="text-decoration:none ;"  href="">BCCI to insist on neutral venue for 2023 Asia Cup</a></h6></div>
+          </div>
+
+
+          <div style="newsimg" class="mt-4">
+            <span>T20 WORLD CUP 2022
+            </span>
+            <div class="col-2_news mt-3">
+              <a   href=""><img style="width:390px ;"   src="https://www.cricbuzz.com/a/img/v1/420x235/i1/c244908/cameron-green-replaces-inglis.jpg" alt=""></a>
+              <a style="text-decoration: none;color: black;font-size: 25px;font-weight: 700;" class="newsimgs mt-5" href="">Cameron Green replaces Inglis in Australia's World Cup squad</a><br>
+              <span>Inglis was ruled out with a hand injury he sustained on a golf course in Sydney
+              </span><br>
+            </div>
+            <div class="mt-2"><h6><a style="text-decoration:none ;"  href="">Topley ruled out of T20 world cup with ankle injury</a></h6></div> 
+            <div class="mt-2"><h6><a style="text-decoration:none ;"  href="">Smith unlikely to play against NZ, indicates Bailey</a></h6></div>
+            <div class="mt-2"><h6><a style="text-decoration:none ;"  href="">Inglis taken to hospital after injury on golf course</a></h6></div><br>
+          </div>
+
+
+          <div class="special_news">
+            <span>NEW APPOINTMENT</span>
+            <div class="special_news_body mt-4">
+              <div class="row">
+              <div class="col-5">
+                <img src="https://www.cricbuzz.com/a/img/v1/135x75/i1/c244894/alyssa-healy-named-as-australi.jpg" alt="">
+
+              </div>
+              <div class="col-7">
+                <a href="">Alyssa Healy named as Australia vice-captain</a><br>
+                <span style="font-size:15px ;font-weight:350" >8h ago</span>
+              </div>
+
+             </div><br>
+             <span style="font-size:16px ;font-weight:400">She takes over from Rachel Haynes who retired last month</span>
+            </div><br>
+
+            <span>INDIA TOUR OF BANGLADESH, 2022
+            </span>
+
+            <div class="special_news_body mt-4">
+              <div class="row">
+              <div class="col-5">
+                <img src="https://www.cricbuzz.com/a/img/v1/135x75/i1/c244906/indias-tour-of-bangladesh-to.jpg" alt="">
+
+              </div>
+              <div class="col-7">
+                <a href="">India's tour of Bangladesh to begin on December 4</a><br>
+                <span style="font-size:15px ;font-weight:350" >53m ago
+                </span>
+              </div>
+
+             </div><br>
+             <span style="font-size:16px ;font-weight:400">The two Tests will be played from December 14 and 22 respectively
+            </span>
+            </div><br>
+
+            <span>DIGEST</span>
+            <div class="special_news_body mt-4">
+              <div class="row">
+              <div class="col-5">
+                <img src="https://www.cricbuzz.com/a/img/v1/135x75/i1/c244934/venkatesh-iyer-ruled-out-for-s.jpg" alt="">
+
+              </div>
+              <div class="col-7">
+                <a href="">Venkatesh Iyer ruled out for six weeks</a><br>
+                <span style="font-size:15px ;font-weight:350" >15m ago
+
+                </span>
+              </div>
+
+             </div><br>
+             <span style="font-size:16px ;font-weight:400">The all-rounder has suffered an ankle injury
+
+            </span><br>
+            </div><br>
+            
+          </div>
+
+
+        </div>
+
+      </div>
+      <div style="" class="col-4  mt-2">
+        <div style="background-color: white;" class="">
+          <h3 style="color:green ;" class="ml-2 ">Featured video</h3>
+          <div class="featured-videos mt-5 ml-2">
+            <embed style="height:200px ;width:350px; border-radius: 5px;" src="https://www.youtube.com/embed/-dj78ujs4ac" type=""><br>
+             <a class="featured-videos-anchor" href="">How prepared is India ahead of T20 World Cup opener vs Pakistan?
+
+
+            </a><br>
+             <span>2h ago</span>
+           </div>
+          <div class="featured-videos mt-3 ml-2">
+           <embed style="height:200px ;width:350px; border-radius: 5px;" src="https://www.youtube.com/embed/MISzPqNsDVA" type=""><br>
+            <a class="featured-videos-anchor" href="">Preview: Bangladesh | T20 WC 2022
+            </a><br>
+            <span>2h ago</span>
+          </div>
+
+          <div class="featured-videos mt-5 ml-2">
+            <embed style="height:200px ;width:350px; border-radius: 5px;" src="https://www.youtube.com/embed/djy_yX5aIU0" type=""><br>
+             <a class="featured-videos-anchor" href="">T20 World Cup | Cricbuzz Live panel predict the top run-getter of the tournament
+            </a><br>
+             <span>1h ago</span>
+           </div>
+
+           <div class="featured-videos mt-5 ml-2">
+            <embed style="height:200px ;width:350px; border-radius: 5px;" src="https://www.youtube.com/embed/ItKImPAXHIo" type=""><br>
+             <a class="featured-videos-anchor" href="">T20 World Cup 2022: Harsha Bhogle previews India's chances
+            </a><br>
+             <span>3h ago</span>
+           </div>
+
+           <div class="featured-videos mt-5 ml-2">
+            <embed style="height:200px ;width:350px; border-radius: 5px;" src="https://www.youtube.com/embed/U3Nt3OyBmcQ" type=""><br>
+             <a class="featured-videos-anchor" href="">T20 World Cup 2022 | 5 things to watch out for ft. India v Pakistan
+
+            </a><br>
+             <span>1h ago</span>
+           </div>
+
+           <div class="featured-videos-button mt-3">
+            <button class="button">More Videos</button>
+           </div>
+           <br><br>
+
+
+        </div>
+        <div class="special mt-2">
+          <div class="row">
+            <h4  class="mt-3 ml-2">Special</h4>
+            <div class="col-12">
+             <div class="special_col ml-2">
+              <div class="special_body mt-2">
+                <img src="https://www.cricbuzz.com/a/img/v1/300x170/i1/c244896/west-indies-are-alive-and-kick.jpg" alt="">
+                <a class="mt-2" href="">World Cup Pulse: Week 1</a><br>
+                <span>Your daily briefings on everything going in and around the T20 World Cup in Australia</span>
+              </div>
+
+              <div class="special_body mt-5">
+                <img src="https://www.cricbuzz.com/a/img/v1/300x170/i1/c244449/who-will-win-the-t20-world-cup.jpg" alt="">
+                <a class="mt-2" href="">T20 World Cup 2022 News Digest
+                </a><br>
+                <span>All the news and updates from Australia during the men's T20 World Cup 2022
+                </span>
+              </div>
+
+              <div class="special_body mt-5">
+                <img src="https://www.cricbuzz.com/a/img/v1/300x170/i1/c240747/trent-boult-asked-to-be-releas.jpg" alt="">
+                <a class="mt-2" href="">Cricket in Transition: A new game in the birth canal
+                </a><br>
+                <span>In the first part of a new feature series on Cricbuzz Plus, Bharat Sundaresan outlines the rapid changes that cricket is going through and poses questions about its future</span>
+              </div>
+
+              <div class="special_body mt-5">
+                <img src="https://www.cricbuzz.com/a/img/v1/300x170/i1/c241433/the-knight-riders-owned-by-sha.jpg" alt="">
+                <a class="mt-2" href="">Cricket in Transition: The rise of the 'open' relationship
+                </a><br>
+                <span>If the BCCI continue to serve as cricket's benevolent dictator, what is the best that other nations can hope for in a changing landscape?
+                </span>
+              </div>
+
+              <div class="special_body mt-5">
+                <img src="https://www.cricbuzz.com/a/img/v1/300x170/i1/c242691/ben-stokes-choosing-himself-an.jpg" alt="">
+                <a class="mt-2" href="">Cricket in transition - A global Indian Private League?
+                </a><br>
+                <span>As cricket becomes increasingly shaped by T20 franchise leagues, a group of Indian businesses are expanding into new frontiers. What's driving them?</span>
+                
+              </div><br>
+
+
+              <!---------------------------------------------->
+
+              
+
+
+
+
+
+             </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    
+    </div>
+
+  </section>
+
+  </div>
+
+
+  <div class="footer_section">
+    <div class="footer_body ">
+      <div class="row">
+        <div class="col-3">
+          <a class="mt-5 ml-5" href="">CricPoint</a>
+
+        </div>
+        <div class="col-3">
+          <div class="footer_body_mobile">
+            <h4 class="ml-2" style="color: white;">Mobile site & apps</h4>
+            <a href=""><i class="fa fa-codiepie"><span></span></i>&nbsp;cricPoint.com</a>
+            <a href=""><i class="fa fa-android"><span></span></i>&nbsp;Android</a>
+          </div>
+
+        </div>
+        <div class="col-3">
+          <div class="footer_body_mobile">
+            <h4 class="" style="color: white;">Follow Us</h4>
+            <a href=""><i class="fa fa-twitter"></i>&nbsp;twitter</a>
+              <a href=""><i class="fa fa-facebook"></i>&nbsp;facebook</a>
+              <a href=""><i class="fa fa-youtube"></i>&nbsp;youtube</a>
+              <a href=""><i class="fa fa-whatsapp"></i>&nbsp;whatsapp</a>
+          </div>
+
+        </div>
+        <div class="col-3">
+          <div class="footer_body_mobile">
+            <h4 class="" style="color: white;">Company</h4>
+            <a href="">Careers</a>
+            <a href="">Advertise</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of Use</a>
+            <a href="">CricPoint TV Ads</a>
+          </div>
+
+        </div>
+        
+
+      </div>
+     
+
+    </div>
+    
+
+  </div>
+
+  
+
+
+
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+
+
+
+  
+</body>
+</html>
